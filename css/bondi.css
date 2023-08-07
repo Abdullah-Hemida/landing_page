@@ -1,0 +1,256 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* global variables */
+:root {
+    --dark-color : #19283f;
+    --green-color : #33d1cc;
+    --red-color: #ff3150;
+    --yellow-color: #ffc400;
+    --section-color: #eff7fa;
+    --gray-color: rgb(204, 203, 207);
+}
+
+.main-btn  {
+  color: var(--yellow-color);
+  background-color: var(--red-color);
+  padding: 0.5rem 1rem; 
+}
+
+.main-btn:hover {
+  color: var(--yellow-color);
+  background-color: var(--red-color);  
+}
+.main-title {
+   position: relative;
+   margin-bottom: 4rem;
+   text-align: center;    
+   margin-top: 6rem;
+   margin-bottom: 6rem;
+}
+
+.main-title p {
+text-transform: uppercase;
+color: var(--bs-light-text);  
+}
+
+.main-title::after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 130px;
+    background-color: var(--green-color);
+    transform: translateX(-50%);
+}
+
+
+/* navebar */
+.main-navbar {
+    background-color: var(--dark-color);
+}
+
+.main-navbar .navbar-nav .nav-link{
+    color: white;
+}
+.main-navbar .navbar-nav .nav-link.active,
+.main-navbar .navbar-nav .nav-link:hover,
+.main-navbar .navbar-nav .nav-link:focus{
+    color: var(--green-color);
+}
+
+.main-navbar .search {
+    border-left: 1px solid var(--green-color);
+    color: var(--green-color);
+}
+ @media (max-width : 992px) {
+    .main-navbar .search {
+        border: none;
+    }
+ }
+ .main-navbar .navbar-toggler {
+    font-size: 1.5rem;
+    color: white;
+    border-color: white;
+}
+
+.main-navbar .navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.landing {
+  background-color: var(--dark-color);
+  height: calc(100vh - 72px);  
+}
+
+/* services */
+.services .icons  {
+  position: relative;
+   
+}
+.services .icons svg:last-child  {
+    color: var(--green-color);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.services .icons .number {
+    font-size: 150px;
+    color: var(--section-color);
+    font-weight: bold;
+    z-index: -1;
+}
+
+.services h4 {
+    margin: 1rem;
+    color: var(--yellow-color);
+}
+
+/* our work */
+.our-work {
+   background-color: var(--section-color);
+}
+
+.our-work ul li {
+  padding: 0.5rem 1rem;  
+}
+
+@media (max-width :767px) {
+    .our-work ul li {
+        padding: 0.25rem 0.5rem;  
+      }  
+}
+.our-work ul li.active {
+  color: var(--yellow-color);   
+  background-color:  var(--red-color);  
+}
+
+.our-work ul li:not(.active):hover {
+    color: var(--red-color);
+}
+
+.our-work .works .work {
+   width: 300px;
+   overflow: hidden;
+   position: relative;
+   cursor: pointer;
+   background-color: white;
+   padding: 5px;
+}
+
+.our-work .works .work::before {
+    position: absolute;
+    content: attr(data-work);
+    background-color: var(--green-color);
+    height: calc(100% - 10px);
+    width: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+    opacity: 75%;
+    transition: 0.5s;
+    font-size: 0;
+}
+
+.our-work .works .work:hover::before {
+    width: calc(100% - 10px);
+    font-size: 20px;
+}
+
+@media (min-width :767px) and (max-width :992px) {
+    .our-work .works .work {
+        width: 200px;
+     }  
+}
+
+@media (min-width :767px) and (max-width :992px) {
+    .our-work .works {
+        height: 50vh;
+     }  
+}
+
+/* start about */
+.about .discrip{
+  max-width: 500px;   
+}
+/* end about */
+
+/* start team */
+.team {
+    background-color: var(--section-color);
+}
+
+.team .team-text h2 {
+  color: var(--yellow-color);
+}
+
+.team .card h2 {
+    background-color: var(--green-color);
+}
+
+.team .img-box div{
+    display: inline;
+}
+
+/* end team */
+
+/* start project */
+.project {
+    background-color: var(--dark-color);
+}
+/* end project */
+
+/* start subscribe */
+.subscribe {
+    background-color: var(--yellow-color);
+}
+.subscribe [value="subscribe"] {
+    color: var(--yellow-color);
+    background-color: var(--dark-color);
+}
+
+/* end subscribe */
+
+/* start footer */
+
+.footer {
+  background-color: var(--dark-color);
+}
+
+.copyright p:first-child span {
+    color: var(--green-color);
+}
+.copyright p:last-child span {
+    color: var(--yellow-color);
+}
+
+.social a {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social .facebook {
+    background-color: #1877f2;
+}
+.social .twitter {
+    background-color: #1da1f2;
+}
+.social .youtube {
+    background-color: #ff0000;
+}
+.social .linkedin {
+    background-color: #0077b5;
+}
+/* end footer */
